@@ -32,9 +32,9 @@ function auth(clientID, clientSecret, contentType, grantType, authBase, mid) {
    var response = accessTokenResult["Response"][0];
    var accessToken = Platform.Function.ParseJSON(response).access_token;
   
-    Write(Stringify(response) + "<br><br>");
       
    return accessToken;
+   
  } catch (e) { 
   Write(Stringify(e));
  };
